@@ -1,5 +1,5 @@
 # Api_final_yatube
-![yamdb_workflow](https://github.com/waybro-54/yamdb_final/workflows/yamdb_workflow/badge.svg)
+![yamdb_workflow](https://github.com/mamontovdn/yamdb_final/workflows/yamdb_workflow/badge.svg)
 ## О проекте
 REST API для социальной сети yatube.
 Позволяет производить действия с постами, комментариями, сообществами и подписками.
