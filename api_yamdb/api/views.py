@@ -15,10 +15,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 
 from api_yamdb.settings import FROM_EMAIL, MAX_LEN_CODE
 from reviews.models import Category, Genre, Review, Title, User
-<<<<<<< HEAD
-=======
 
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
 from .filters import TitleFilter
 from .permissions import (
     IsAdmin,
@@ -49,11 +46,7 @@ class CategoryAndGenreViewSet(mixins.CreateModelMixin,
                               viewsets.GenericViewSet):
     """Вьюсет для работы с Category и Genre: создание, получение и удаление."""
 
-<<<<<<< HEAD
-    permission_classes = (IsAdmin | IsReadOnly,)
-=======
     permission_classes = (IsAdmin, IsReadOnly,)
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
     filter_backends = (filters.SearchFilter,)
     search_fields = ['name']
     lookup_field = 'slug'
@@ -154,17 +147,19 @@ class TitleViewSet(viewsets.ModelViewSet):
     field_names = 'name'
     queryset = Title.objects.annotate(
         rating=Avg('reviews__score')).order_by(field_names)
-<<<<<<< HEAD
-    permission_classes = (IsAdmin | IsReadOnly,)
-=======
-    permission_classes = (IsAdmin, IsReadOnly,)
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
-    filterset_class = TitleFilter
-    filter_backends = (DjangoFilterBackend, filters.SearchFilter)
-    filterset_class = TitleFilter
 
-    def get_serializer_class(self):
-        if self.action in ('list', 'retrieve'):
+
+<< << << < HEAD
+permission_classes = (IsAdmin | IsReadOnly,)
+== == == =
+permission_classes = (IsAdmin, IsReadOnly,)
+>>>>>> > 40b8b57018d3781636a6d2e555925772652c6353
+filterset_class = TitleFilter
+filter_backends = (DjangoFilterBackend, filters.SearchFilter)
+ filterset_class = TitleFilter
+
+  def get_serializer_class(self):
+       if self.action in ('list', 'retrieve'):
             return TitleSerializer
         return TitleSaveSerializer
 

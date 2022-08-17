@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-"""
-WSGI config for YaMDb project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
-"""
-
-=======
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
 import os
 
 from django.core.wsgi import get_wsgi_application

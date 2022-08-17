@@ -1,12 +1,6 @@
 import os
 from datetime import timedelta
 
-<<<<<<< HEAD
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
-=======
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,7 +9,6 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('SECRET_KEY')
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -81,11 +74,11 @@ DATABASES = {
         'USER': os.getenv('POSTGRES_USER', default='postgres'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),
         'HOST': os.getenv('DB_HOST', default='db'),
-<<<<<<< HEAD
+        << << << < HEAD
         'PORT': os.getenv('DB_PORT', default='5432'),
-=======
+        == == == =
         'PORT': os.getenv('DB_PORT', default=5432)
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
+        >> >>>> > 40b8b57018d3781636a6d2e555925772652c6353
     }
 }
 

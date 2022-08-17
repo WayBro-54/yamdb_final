@@ -11,8 +11,4 @@ sqlparse==0.3.1
 pytest==6.2.4
 pytest-django==4.4.0
 pytest-pythonpath==0.7.3
-<<<<<<< HEAD
 python-dotenv==0.19.2
-=======
-python-dotenv==0.19.2
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
