@@ -9,17 +9,10 @@ services:
       - ./.env
 
   web:
-<<<<<<< HEAD
     image: waybro/try:last
     build:
     context: ../
-     dockerfile: api_yamdb/Dockerfile
-=======
-    image: staszatshevskii/nifty_diffie
-    build: 
-      context: ../
-      dockerfile: api_yamdb/Dockerfile
->>>>>>> 40b8b57018d3781636a6d2e555925772652c6353
+    dockerfile: api_yamdb/Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
