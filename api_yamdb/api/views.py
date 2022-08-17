@@ -148,18 +148,13 @@ class TitleViewSet(viewsets.ModelViewSet):
     queryset = Title.objects.annotate(
         rating=Avg('reviews__score')).order_by(field_names)
 
+    permission_classes = (IsAdmin, IsReadOnly,)
+    filterset_class = TitleFilter
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter)
+    filterset_class = TitleFilter
 
-<< << << < HEAD
-permission_classes = (IsAdmin | IsReadOnly,)
-== == == =
-permission_classes = (IsAdmin, IsReadOnly,)
->>>>>> > 40b8b57018d3781636a6d2e555925772652c6353
-filterset_class = TitleFilter
-filter_backends = (DjangoFilterBackend, filters.SearchFilter)
- filterset_class = TitleFilter
-
-  def get_serializer_class(self):
-       if self.action in ('list', 'retrieve'):
+    def get_serializer_class(self):
+        if self.action in ('list', 'retrieve'):
             return TitleSerializer
         return TitleSaveSerializer
 
