@@ -11,7 +11,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.7
 
     - name: Install dependencies
       run: |
@@ -22,3 +22,5 @@ jobs:
       run: pytest
     - name: Test flake8
       run: flake8 api/ api_yamdb/ --exclude api/migrations/,api_yamdb/settings.py
+
+      
