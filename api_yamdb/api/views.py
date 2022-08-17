@@ -15,6 +15,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 
 from api_yamdb.settings import FROM_EMAIL, MAX_LEN_CODE
 from reviews.models import Category, Genre, Review, Title, User
+
 from .filters import TitleFilter
 from .permissions import (
     IsAdmin,
@@ -45,7 +46,7 @@ class CategoryAndGenreViewSet(mixins.CreateModelMixin,
                               viewsets.GenericViewSet):
     """Вьюсет для работы с Category и Genre: создание, получение и удаление."""
 
-    permission_classes = (IsAdmin | IsReadOnly,)
+    permission_classes = (IsAdmin, IsReadOnly,)
     filter_backends = (filters.SearchFilter,)
     search_fields = ['name']
     lookup_field = 'slug'
@@ -146,7 +147,7 @@ class TitleViewSet(viewsets.ModelViewSet):
     field_names = 'name'
     queryset = Title.objects.annotate(
         rating=Avg('reviews__score')).order_by(field_names)
-    permission_classes = (IsAdmin | IsReadOnly,)
+    permission_classes = (IsAdmin, IsReadOnly,)
     filterset_class = TitleFilter
     filter_backends = (DjangoFilterBackend, filters.SearchFilter)
     filterset_class = TitleFilter
