@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![yamdb_workflow](https://github.com/WayBro-54/yamdb_final/workflows/yamdb_workflow/badge.svg)
 
 ### Описание проекта  
