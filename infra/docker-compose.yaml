@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: waybro/try:last
+    image: waybro/api_yamdb:latest
     build:
     context: ../
     dockerfile: api_yamdb/Dockerfile
