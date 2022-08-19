@@ -6,7 +6,7 @@ services:
     env_file:
       - .env
   web:
-    image: waybro/api_yamdb:latest
+    image: waybro/api_yamdb:v.1.0
     restart: always
     volumes:
       - static_value:/app/static/
