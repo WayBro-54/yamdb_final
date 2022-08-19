@@ -56,10 +56,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            ls -a
             cd yamdb_final/infra
-            pwd
-            ls -a
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
