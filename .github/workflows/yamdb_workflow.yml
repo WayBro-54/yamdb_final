@@ -57,6 +57,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd ${{ secrets.USER }}/yamdb_final/infra
+            pwd
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
