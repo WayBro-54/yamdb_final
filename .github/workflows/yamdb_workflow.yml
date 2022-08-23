@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: waybro/api_yamdb:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
           context: api_yamdb
           file: api_yamdb/Dockerfile
   
