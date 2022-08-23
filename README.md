@@ -1,4 +1,4 @@
-![yamdb_workflow](https://github.com/WayBro-54/yamdb_final/workflows/yamdb_workflow/badge.svg)
+[![api_yamdb workflow](https://github.com/waybro-54/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
 
 ### Описание проекта  
 
