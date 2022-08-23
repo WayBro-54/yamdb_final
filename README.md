@@ -1,11 +1,19 @@
 [![api_yamdb workflow](https://github.com/waybro-54/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
 
+
+### Проверка проекта
+[Редок]  (http://51.250.24.135/redoc/) <br>
+[Админ]  (http://51.250.24.135/admin/) <br>
+[API]  (http://51.250.24.135/api/v1/) <br>
+
+
 ### Описание проекта  
 
 API для проекта Yamdb на Django Rest Framework, документация Redoc, JWT-токены.
 Доступ к работе с категориями, жанрами, произведениями, отзывами и комментариями.  
 
 ### Создатели
+
 
 [Диана Корсак](https://github.com/onemi) <br>
 [Артем Ултанов](https://github.com/WayBro-54) <br>
