@@ -1,5 +1,3 @@
-[![api_yamdb workflow](https://github.com/waybro-54/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
-
 
 ### Проверка проекта
 [Редок](http://51.250.24.135/redoc/) <br>
